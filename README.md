@@ -1,4 +1,4 @@
-Mediawiki and related services on Docker containers
+Mediawiki and related services in Docker containers
 
 # HOW-TOs
 ## Up and running

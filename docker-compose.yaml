@@ -3,7 +3,7 @@ networks:
   main:
 services:
   mw:
-    build: ../mw-docker
+    image: alankang/mw-docker
     networks:
       main:
         aliases:
@@ -15,7 +15,7 @@ services:
       - mw-node
     volumes:
       - data-mw:/data:rw
-      - ./custom:/custom:ro
+      - /rootfs/src/custom:/custom:ro
     environment:
       - MEDIAWIKI_SITE_SERVER=${MEDIAWIKI_SITE_SERVER}
       - MEDIAWIKI_SITE_NAME=${MEDIAWIKI_SITE_NAME}
@@ -29,7 +29,7 @@ services:
       - MEDIAWIKI_RESTBASE_URL=http://mw-node:7231/localhost/v1
 
   mw-node:
-    build: ../mw-node-docker
+    image: alankang/mw-node-docker
     networks:
       main:
         aliases:
