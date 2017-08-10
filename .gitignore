@@ -6,6 +6,7 @@ custom/statics/*
 
 # IDEs
 .idea/
+*.iml
 
 # OS
 .DS_Store
