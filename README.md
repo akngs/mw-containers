@@ -3,7 +3,7 @@ Mediawiki and related services in Docker containers
 # HOW-TOs
 ## Up and running
 
-1.  Install the latest version of `docker` and `docker-compose`.
+1.  Install the latest version of `docker`.
 2.  Create `.env` file by copying and editing `.env.sample` file.
 4.  Create `custom/LocalSettings.post.php` file by copying and editing
     `custom/LocalSettings.post.php.sample`

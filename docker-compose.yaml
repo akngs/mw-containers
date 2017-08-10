@@ -15,7 +15,7 @@ services:
       - mw-node
     volumes:
       - data-mw:/data:rw
-      - /rootfs/src/custom:/custom:ro
+      - ${PWD}/custom:/custom:ro
     environment:
       - MEDIAWIKI_SITE_SERVER=${MEDIAWIKI_SITE_SERVER}
       - MEDIAWIKI_SITE_NAME=${MEDIAWIKI_SITE_NAME}

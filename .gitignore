@@ -1,4 +1,8 @@
 # Project specifics
+.env
+custom/LocalSettings.post.php
+custom/statics/*
+!custom/statics/.keep
 
 # IDEs
 .idea/
