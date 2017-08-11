@@ -75,3 +75,5 @@ $wgLogo = $wgScriptPath . '/statics/logo.png';
 $wgLogoHD = array(
     "2x" => $wgScriptPath . '/statics/logo2x.png'
 );
+
+$GLOBALS['egMapsDefaultService'] = 'openlayers';
