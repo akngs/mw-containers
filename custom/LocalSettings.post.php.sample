@@ -22,6 +22,7 @@ wfLoadExtension( 'Scribunto' );
 
 wfLoadExtension( 'SimpleMathJax' );
 $wgSimpleMathJaxInlineMath = [["$","$"]];
+$wgSimpleMathJaxSize = 100;
 
 wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 
