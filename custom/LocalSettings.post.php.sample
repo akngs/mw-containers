@@ -11,12 +11,6 @@ wfLoadExtension( 'Flow' );
 $wgNamespaceContentModels[NS_TALK] = 'flow-board';
 $wgNamespaceContentModels[NS_USER_TALK] = 'flow-board';
 
-wfLoadExtension( 'Math' );
-$wgDefaultUserOptions['math'] = 'png';
-$wgMathValidModes['png'] = true;
-$wgTexvc = '/usr/bin/texvc';
-$wgUseTeX = true;
-
 wfLoadExtension( 'MobileFrontend' );
 wfLoadExtension( 'PageImages' );
 wfLoadExtension( 'ParserFunctions' );
@@ -25,6 +19,9 @@ wfLoadExtension( 'ReplaceText' );
 $wgGroupPermissions['bureaucrat']['replacetext'] = true;
 
 wfLoadExtension( 'Scribunto' );
+
+wfLoadExtension( 'SimpleMathJax' );
+$wgSimpleMathJaxInlineMath = [["$","$"]];
 
 wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 
