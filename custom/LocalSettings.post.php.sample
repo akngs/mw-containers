@@ -1,6 +1,7 @@
 <?php
 # Extensions
 wfLoadExtension( 'BetaFeatures' );
+wfLoadExtension( 'CategoryTree' );
 wfLoadExtension( 'Cite' );
 wfLoadExtension( 'Citoid' );
 
