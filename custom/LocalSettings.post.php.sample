@@ -14,6 +14,7 @@ $wgNamespaceContentModels[NS_USER_TALK] = 'flow-board';
 wfLoadExtension( 'MobileFrontend' );
 wfLoadExtension( 'PageImages' );
 wfLoadExtension( 'ParserFunctions' );
+wfLoadExtension( 'Popups' );
 
 wfLoadExtension( 'ReplaceText' );
 $wgGroupPermissions['bureaucrat']['replacetext'] = true;
