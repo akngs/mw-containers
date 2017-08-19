@@ -19,6 +19,8 @@ wfLoadExtension( 'Popups' );
 wfLoadExtension( 'ReplaceText' );
 $wgGroupPermissions['bureaucrat']['replacetext'] = true;
 
+wfLoadExtension( 'RevisionSlider' );
+
 wfLoadExtension( 'Scribunto' );
 
 wfLoadExtension( 'SimpleMathJax' );
