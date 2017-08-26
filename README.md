@@ -15,6 +15,5 @@ Mediawiki and related services in Docker containers
 
 *   Switch from wikitext editor to visual editor
 *   HHVM
-*   SSL using letsencrypt
 *   Mathoid
 *   Citoid
