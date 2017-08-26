@@ -10,6 +10,7 @@ services:
           - mw
     ports:
       - "80:80"
+      - "443:443"
     links:
       - mysql
       - mw-node
@@ -27,6 +28,7 @@ services:
       - MEDIAWIKI_DB_HOST=${MEDIAWIKI_DB_HOST}
       - MEDIAWIKI_DB_TYPE=${MEDIAWIKI_DB_TYPE}
       - MEDIAWIKI_RESTBASE_URL=http://mw-node:7231/localhost/v1
+      - MEDIAWIKI_ENABLE_SSL=${MEDIAWIKI_ENABLE_SSL}
 
   mw-node:
     image: alankang/mw-node-docker
