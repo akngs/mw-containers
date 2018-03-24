@@ -11,9 +11,6 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    links:
-      - mysql
-      - mw-node
     volumes:
       - data-mw:/data:rw
       - ${PWD}/custom:/custom:ro
@@ -26,26 +23,16 @@ services:
       - MEDIAWIKI_ADMIN_EMAIL=${MEDIAWIKI_ADMIN_EMAIL}
       - MEDIAWIKI_DB_USER=${MEDIAWIKI_DB_USER}
       - MEDIAWIKI_DB_PASSWORD=${MEDIAWIKI_DB_PASSWORD}
-      - MEDIAWIKI_DB_HOST=${MEDIAWIKI_DB_HOST}
-      - MEDIAWIKI_DB_TYPE=${MEDIAWIKI_DB_TYPE}
-      - MEDIAWIKI_RESTBASE_URL=http://mw-node:7231/localhost/v1
-      - MEDIAWIKI_ENABLE_SSL=${MEDIAWIKI_ENABLE_SSL}
-
-  mw-node:
+      - MEDIAWIKI_PROTOCOL=${MEDIAWIKI_PROTOCOL}
+  restbase:
     image: alankang/mw-node-docker
     networks:
       main:
         aliases:
-          - mw-node
-    # Temporarily expose RB port directly.
-    # TODO: Set up rewrite at /api/rest_v1/.
-    ports:
-      - "7231:7231"
-    volumes:
-      - data-mw-node:/data:rw
+          - restbase
     environment:
-      - MEDIAWIKI_API_URL=http://mw/api.php
-
+      - MEDIAWIKI_SITE_SERVER=${MEDIAWIKI_SITE_SERVER}
+      - MEDIAWIKI_PROTOCOL=${MEDIAWIKI_PROTOCOL}
   mysql:
     image: mariadb
     networks:
@@ -54,11 +41,9 @@ services:
           - mysql
     volumes:
       - data-mysql:/var/lib/mysql:rw
-      - ${PWD}/mysql.conf.d:/etc/mysql/conf.d
     environment:
       - MYSQL_ROOT_PASSWORD=${MEDIAWIKI_DB_PASSWORD}
 
 volumes:
   data-mw:
-  data-mw-node:
   data-mysql:

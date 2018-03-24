@@ -1,19 +1,23 @@
-Mediawiki and related services in Docker containers
+## Install and run
 
-# HOW-TOs
-## Up and running
+Ubuntu 16:
 
-1.  Install the latest version of `docker`.
-2.  Create `.env` file by copying and editing `.env.sample` file.
-4.  Create `custom/LocalSettings.post.php` file by copying and editing
-    `custom/LocalSettings.post.php.sample`
-5.  Run `./run.sh up` to start containers
-6.  Run `./run.sh down` to stop containers
+    sudo curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+    sudo chmod +x /usr/local/bin/docker-compose
+    sudo apt update -y && sudo apt install docker -y
+    sudo service docker start
+    sudo usermod -a -G docker ubuntu
 
+Amazon Linux 2:
 
-# TODO
+    sudo curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+    sudo chmod +x /usr/local/bin/docker-compose
+    sudo yum update -y && sudo yum install docker -y
+    sudo service docker start
+    sudo usermod -a -G docker ec2-user
 
-*   Switch from wikitext editor to visual editor
-*   HHVM
-*   Mathoid
-*   Citoid
+Common:
+
+1. Create and edit ``.env`` file by copying ``.env.sample`` file
+2. Create and edit ``custom/LocalSettings.post.php`` file by copying ``custom/LocalSettings.post.php.sample`` file
+2. Run ``docker-compose build && docker-compose up -d``
