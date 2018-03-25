@@ -1,6 +1,7 @@
 # Project specifics
 .env
 custom/LocalSettings.post.php
+custom/nginx.conf
 custom/statics/*
 !custom/statics/.keep
 
