@@ -66,10 +66,6 @@ wfLoadExtension( 'CodeEditor' );
 $wgScribuntoUseCodeEditor = true;
 $wgScribuntoUseGeSHi = true;
 
-# Semantic wiki
-enableSemantics( '${MEDIAWIKI_SITE_SERVER}' );
-$smwgShowFactbox = SMW_FACTBOX_NONEMPTY;
-
 # Misc.
 $wgArticlePath = "/wiki/$1";
 
