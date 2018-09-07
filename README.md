@@ -1,5 +1,13 @@
 ## Install and run
 
+Ubuntu 18:
+
+    sudo curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+    sudo chmod +x /usr/local/bin/docker-compose
+    sudo apt update -y && sudo apt install docker.io -y
+    sudo service docker start
+    sudo usermod -a -G docker ubuntu
+
 Ubuntu 16:
 
     sudo curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
