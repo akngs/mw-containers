@@ -28,4 +28,5 @@ Common:
 
 1. Create and edit ``.env`` file by copying ``.env.sample`` file
 2. Create and edit ``custom/LocalSettings.post.php`` file by copying ``custom/LocalSettings.post.php.sample`` file
-2. Run ``docker-compose build && docker-compose up -d``
+3. Create and edit ``custom/nginx.conf`` file by copying ``custom/nginx.conf.sample`` file 
+4. Run ``sudo ./run.sh up -d``
