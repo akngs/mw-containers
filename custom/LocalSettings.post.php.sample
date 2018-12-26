@@ -11,6 +11,8 @@ wfLoadExtension( 'Flow' );
 $wgNamespaceContentModels[NS_TALK] = 'flow-board';
 $wgNamespaceContentModels[NS_USER_TALK] = 'flow-board';
 
+wfLoadExtension( 'GraphViz' );
+
 wfLoadExtension( 'MobileFrontend' );
 wfLoadExtension( 'PageImages' );
 wfLoadExtension( 'ParserFunctions' );
